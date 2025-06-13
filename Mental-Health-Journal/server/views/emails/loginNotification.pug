@@ -1,0 +1,16 @@
+extends base
+
+block content
+  p Hi #{firstName},
+  p We noticed a new sign-in to your AI-Powered Mental Health Journal account.
+  p Details of the sign-in:
+  ul
+    li Date: #{date}
+    li Device: #{device}
+    li Location: #{location}
+    li IP Address: #{ip}
+  p If this was you, you can safely ignore this email. If you don't recognize this activity, please secure your account immediately by changing your password.
+  p(style="text-align: center;")
+    a.button(href=`${process.env.CLIENT_URL}/account/security`) Secure Account
+  p Best regards,
+  p The AI-Powered Mental Health Journal Team
